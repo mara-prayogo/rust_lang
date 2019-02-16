@@ -72,12 +72,11 @@ fn main() {
         /* Using 'match' to move from crashing on an error to handling the
          * error. */
         let guess: u32 = match guess.trim().parse() {
-            /* If Ok, 'parse' returns the number */
+            /* If Ok, 'parse' returns the number. It won't check
+             * the arms below. */
             Ok(num) => num,
             /* '_' is catchall value. Meaning we want to match all 
-            * the Err values, no matter what info they contain, except
-            * the resulting number value of course, as that condition
-            * is handled in the first arm. */
+            * the Err values, no matter what info they contain. */
             Err(_) => continue,
         };
 
