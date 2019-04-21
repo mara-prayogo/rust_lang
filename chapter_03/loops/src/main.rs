@@ -14,7 +14,7 @@ fn main() {
     /* Conditional loops using 'while' */
     /* Countdown code */
     loop_var = 3;
-    
+
     while loop_var != 0 {
         println!("{}!", loop_var);
 
@@ -39,13 +39,13 @@ fn main() {
 
     /* More concise alternative is to use 'for' loop and execute code for
      * each item in the collection */
-    for element in array.iter(){
+    for element in array.iter() {
         println!("The value is: {}", element);
     }
 
     /* Countdown code using 'for' loop */
     /* Note that (1..4). It is a Range type provided by standard library
-     * (a..b) -> [a,b). i.e. a is inclusive and b is exclusive 
+     * (a..b) -> [a,b). i.e. a is inclusive and b is exclusive
      * 'rev' is used to reversed the Range */
     for number in (1..4).rev() {
         println!("{}!", number);
